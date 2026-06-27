@@ -115,6 +115,21 @@ tbody tr:hover {
     background: rgba(30, 127, 65, 0.04)
 }
 
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    color: #123;
+    font: inherit;
+}
+
+select:focus {
+    outline: 2px solid rgba(30, 127, 65, 0.3);
+}
+
 .site-footer {
     padding: 12px 0;
     color: var(--muted)

@@ -21,10 +21,38 @@ function renderTablePeople(items) {
   const thead = document.createElement('thead');
   const headerRow = document.createElement('tr');
 
+  const allNames = Array.from(new Set(items.map(it => it.name ?? '').filter(Boolean)));
+
   // Build header row
   cols.forEach(c => {
     const th = document.createElement('th');
-    th.textContent = c;
+    if (c === 'name') {
+      const label = document.createElement('div');
+      label.textContent = c;
+      label.style.marginBottom = '4px';
+
+      const select = document.createElement('select');
+      const emptyOption = document.createElement('option');
+      emptyOption.value = '';
+      emptyOption.textContent = 'All names';
+      select.appendChild(emptyOption);
+
+      allNames.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        select.appendChild(option);
+      });
+
+      select.addEventListener('change', () => {
+        renderRows(select.value || null);
+      });
+
+      th.appendChild(label);
+      th.appendChild(select);
+    } else {
+      th.textContent = c;
+    }
     headerRow.appendChild(th);
   });
   thead.appendChild(headerRow);
@@ -32,16 +60,22 @@ function renderTablePeople(items) {
 
   // Build body rows
   const tbody = document.createElement('tbody');
-  items.forEach(it => {
-    const tr = document.createElement('tr');
-    cols.forEach(c => {
-      const td = document.createElement('td');
-      // Use nullish coalescing to avoid showing "undefined" in cells
-      td.textContent = it[c] ?? '';
-      tr.appendChild(td);
+
+  function renderRows(filterName) {
+    tbody.textContent = '';
+    items.forEach(it => {
+      if (filterName && it.name !== filterName) return;
+      const tr = document.createElement('tr');
+      cols.forEach(c => {
+        const td = document.createElement('td');
+        td.textContent = it[c] ?? '';
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
     });
-    tbody.appendChild(tr);
-  });
+  }
+
+  renderRows(null);
   table.appendChild(tbody);
   return table;
 }

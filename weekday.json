@@ -4,14 +4,15 @@
     "shortForm": "Mon"
   },
   {
-    "name": "Tuesday"
+    "name": "Tuesday",
+    "shortForm": "Tue"
   },
   {
     "name": "Wednesday",
     "shortForm": "Wed"
   },
   {
-    "name": "Thursday"
+    "name": "Thursday",
     "shortForm": "Thu"
   },
   {
@@ -19,10 +20,12 @@
     "shortForm": "Fri"
   },
   {
-    "shortForm": "Sat",
+    "name": "Saturday",
+    "shortForm": "Sat"
   },
   {
     "name": "Sunday",
+    "shortForm": "Sun",
     "uselessField": "uselessValue"
   }
 ]
