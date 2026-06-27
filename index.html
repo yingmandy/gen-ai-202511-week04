@@ -1,51 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Week 04 Demo</title>
-        <meta name="description" content="This is the description to be read by search engine" />
-        <link rel="stylesheet" href="styles.css" />
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Week 04 Demo</title>
+    <meta name="description" content="A calm editorial dashboard landing page for the Week 04 demo." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    <body>
-        <header class="site-header">
-            <div class="container">
-                <h1>Week 04 Demo</h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="formatLeaveData.html">Format Leave Data</a></li>
-                        <li><a href="formatPeopleData.html">Format People Data</a></li>
-                    </ul>
-                </nav>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <div class="brand">
+          <span class="brand-logo">Steep</span>
+          <span class="brand-label">Week 04 Demo</span>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="formatLeaveData.html">Leave</a></li>
+            <li><a href="formatPeopleData.html">People</a></li>
+            <li><a href="formatWeekdayData.html">Weekday</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Soft dashboard preview</p>
+            <h1>Calm data moments for a gentle analytics workspace.</h1>
+            <p class="hero-text">
+              A refined Week 04 demo that frames JSON data as polished cards and clean tables, using a warm editorial accent and a quiet product-first layout.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="formatPeopleData.html">View people data</a>
+              <a class="btn btn-link" href="formatLeaveData.html">View leave data</a>
             </div>
-        </header>
+          </div>
 
-        <main class="container">
-            <section>
-                <h2>Welcome to Week 04 demo</h2>
-                <p>
-                    This small demo shows how to fetch JSON files and render them in a
-                    table for a Coding 101 class.
-                </p>
-                <ul class="quick-links">
-                    <li><a class="btn" href="formatLeaveData.html">Format Leave Data</a></li>
-                    <li><a class="btn" href="formatPeopleData.html">Format People Data</a></li>
-                </ul>
-            </section>
-        </main>
+          <div class="hero-cards">
+            <article class="hero-card card-warm">
+              <p class="card-label">People dataset</p>
+              <h2>Team roster</h2>
+              <p>A clean table display for names, languages, IDs and bios.</p>
+            </article>
+            <article class="hero-card card-cool">
+              <p class="card-label">Leave tracker</p>
+              <h2>Approvals</h2>
+              <p>Record leave requests in a polished format with date and reason clarity.</p>
+            </article>
+            <article class="hero-card card-surface">
+              <p class="card-label">Weekday mapping</p>
+              <h2>Reference guide</h2>
+              <p>The same calm UI extends to simple lookup tables and small dataset pages.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <footer class="site-footer">
-            <div class="container">
-                <div>
-                    <h3>Copyright © 2025</h3>
-                    <ul class="social">
-                        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-                        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    </body>
+      <section class="feature-section">
+        <div class="container feature-grid">
+          <article class="feature-card">
+            <p class="feature-tag">Editorial experience</p>
+            <h3>Designed like a product preview.</h3>
+            <p>Generous radii, soft surface tones and a restrained rust accent keep the page calm and confident.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-tag">Focused action</p>
+            <h3>One filled CTA, one text-link secondary.</h3>
+            <p>The interface guides visitors clearly without overwhelming the page with competing buttons.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-tag">Responsive layout</p>
+            <h3>Clean cards that scale.</h3>
+            <p>White and fog surfaces stack naturally across devices while preserving a magazine-style rhythm.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© 2025 Week 04 Demo</p>
+        <ul class="social">
+          <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+          <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
